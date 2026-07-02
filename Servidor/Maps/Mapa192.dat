@@ -1,0 +1,7 @@
+[Mapa192]
+Name=Cielo
+MusicNum=1
+StartPos=0-0-0
+Terreno=BOSQUE
+Zona=CIUDAD
+Restringir=No

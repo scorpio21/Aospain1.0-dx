@@ -1,0 +1,9 @@
+[mapa188]
+Name=Castillo Este
+MusicNum=1
+StartPos=0-0-0
+Terreno=NIEVE
+Zona=CAMPO
+Restringir=No
+MinLevel=30
+PuedeMascotas=1

@@ -1,0 +1,31 @@
+>             Case "NLOGIN"
+                  rdata = Right$(rdata, Len(rdata) - 6)
+                  
+                  Dim UserName As String
+                  Dim UserRaza As String
+                  Dim UserSexo As String
+                  Dim UserClase As String
+                  Dim UserHogar As String
+                  Dim UserAccount As String
+                  
+                  UserName = ReadField(1, rdata, Asc(","))
+                  UserRaza = ReadField(2, rdata, Asc(","))
+                  UserSexo = ReadField(3, rdata, Asc(","))
+                  UserClase = ReadField(4, rdata, Asc(","))
+                  UserHogar = ReadField(5, rdata, Asc(","))
+                  UserAccount = ReadField(6, rdata, Asc(","))
+                  
+                  'Creamos el personaje vinculado a la cuenta
+                  Call ConnectNewUser(UserIndex, UserName, UserList(UserIndex).AccountedPass, 0, 0, UserRaza, UserSexo, UserClase, _
+                      "15", "15", "15", "15", "15", _
+                      "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", _
+                      "mail@cuenta.com", UserHogar, UserAccount)
+                      
+                  'Vinculamos el PJ a la cuenta física (.act)
+                  Call ChrToAccount(UserAccount, UserName)
+                  Exit Sub
+                  
+          
+              Case "ALOGIN"
+      Call LogError("DEBUG: Recibido paquete ALOGIN")
+      rdata = Right$(rdata, Len(rdata) - 6)

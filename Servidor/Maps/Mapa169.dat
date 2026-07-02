@@ -1,0 +1,10 @@
+[Mapa169]
+Name=Zona residencial de Nix
+MusicNum=22-1
+StartPos=0-0-0
+Terreno=BOSQUE
+Zona=CIUDAD
+Restringir=No
+MagiaSinEfecto=1
+BackUp= 1
+pk=1

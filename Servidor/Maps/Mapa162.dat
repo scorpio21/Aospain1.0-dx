@@ -1,0 +1,8 @@
+[Mapa162]
+Name=Bosque élfico
+MusicNum=1
+StartPos=0-0-0
+Restringir=No
+Terreno=NIEVE
+Zona=CAMPO
+BackUp= 1

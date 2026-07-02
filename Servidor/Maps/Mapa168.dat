@@ -1,0 +1,9 @@
+[Mapa168]
+Name=Ciudad Templaria
+MusicNum=22-1
+StartPos=0-0-0
+Terreno=BOSQUE
+Zona=CIUDAD
+Restringir=No
+BackUp= 1
+pk=1

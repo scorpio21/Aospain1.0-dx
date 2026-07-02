@@ -1,0 +1,9 @@
+[Mapa85]
+Name=Casa Encantada
+MusicNum=1
+StartPos=0-0-0
+Terreno=CASA
+Zona=CAMPO
+Restringir=No
+MinLevel=30
+PuedeMascotas=1

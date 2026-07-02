@@ -1,0 +1,8 @@
+[Mapa165]
+Name=Crucero
+MusicNum=4-1
+StartPos=165-0-0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=No
+pk=1

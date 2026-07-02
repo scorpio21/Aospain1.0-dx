@@ -1,0 +1,9 @@
+[Mapa167]
+Name=Sala de Invocaciones
+MusicNum=1
+StartPos=0-0-0
+Restringir=No
+Terreno=BOSQUE
+Zona=DUNGEON
+MinLevel=30
+PuedeMascotas=1

@@ -1,0 +1,9 @@
+[Mapa183]
+Name=IceBill
+MusicNum=1
+StartPos=0-0-0
+Terreno=NIEVE
+Zona=CIUDAD
+Restringir=No
+BackUp= 1
+pk=1

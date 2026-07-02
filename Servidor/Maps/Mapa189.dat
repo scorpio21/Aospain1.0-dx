@@ -1,0 +1,9 @@
+[mapa189]
+Name=Castillo Oeste
+MusicNum=1
+StartPos=0-0-0
+Restringir=No
+Terreno=NIEVE
+Zona=CAMPO
+MinLevel=30
+PuedeMascotas=1

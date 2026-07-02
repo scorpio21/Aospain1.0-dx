@@ -1,0 +1,8 @@
+[Mapa190]
+Name=Fortaleza
+StartPos=0-0-0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=No
+MinLevel=30
+PuedeMascotas=1

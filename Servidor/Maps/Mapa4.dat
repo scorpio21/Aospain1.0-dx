@@ -1,0 +1,12 @@
+[Mapa4]
+Name=suburbios infectados
+MusicNum=3-1
+StartPos=0-0-0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=No
+[Mapas Aomania 4.0\Mapas Aomania 4.0\Mapa4]
+StartPos=0-0-0
+Terreno=NIEVE
+Zona=CAMPO
+Restringir=No

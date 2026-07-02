@@ -1,0 +1,7 @@
+[Mapa81]
+Name=Laberinto de Teleports
+MusicNum=23-1
+StartPos=0-0-0
+Restringir=No
+Terreno=BOSQUE
+Zona=DUNGEON

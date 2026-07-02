@@ -1,0 +1,13 @@
+[History]
+1=#P0#=mb	#P1#=CargarHechizos	#P2#=ServidorArgentum/ES/CargarHechizos	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20220604154406	#P7#=0	#P8#=18	.
+2=#P0#=mb	#P1#=Main	#P2#=ServidorArgentum/General/Main	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20211009022715	#P7#=0	#P8#=8	.
+3=#P0#=mb	#P1#=ConnectNewUser	#P2#=ServidorArgentum/TCP/ConnectNewUser	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20211009021801	#P7#=0	#P8#=0	.
+4=#P0#=mb	#P1#=UserDie	#P2#=ServidorArgentum/UsUaRiOs/UserDie	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20211008214158	#P7#=0	#P8#=132	.
+5=#P0#=mb	#P1#=HandleData	#P2#=ServidorArgentum/TCP/HandleData	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20211008214048	#P7#=0	#P8#=928	.
+6=#P0#=mb	#P1#=CargarBackUp_Nuevo2	#P2#=ServidorArgentum/ES/CargarBackUp_Nuevo2	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907194226	#P7#=0	#P8#=131	.
+7=#P0#=mb	#P1#=LoadOBJData	#P2#=ServidorArgentum/ES/LoadOBJData	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907194044	#P7#=0	#P8#=303	.
+8=#P0#=mb	#P1#=LoadSini	#P2#=ServidorArgentum/ES/LoadSini	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907193407	#P7#=0	#P8#=-2	.
+9=#P0#=mb	#P1#=LoadMapData	#P2#=ServidorArgentum/ES/LoadMapData	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907193353	#P7#=0	#P8#=123	.
+10=#P0#=mb	#P1#=CargarBackUp	#P2#=ServidorArgentum/ES/CargarBackUp	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907193317	#P7#=0	#P8#=135	.
+11=#P0#=mb	#P1#=Restart	#P2#=ServidorArgentum/General/Restart	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907193206	#P7#=0	#P8#=4	.
+12=#P0#=mb	#P1#=LoadUserStats	#P2#=ServidorArgentum/ES/LoadUserStats	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210907193100	#P7#=0	#P8#=0	.

@@ -1,0 +1,8 @@
+[Mapa157]
+Name=Sala de Faraones
+MusicNum=1
+StartPos=0-0-0
+Terreno=BOSQUE
+Zona=DUNGEON
+Restringir=No
+BackUp= 1

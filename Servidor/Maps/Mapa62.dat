@@ -1,0 +1,9 @@
+[Mapa62]
+Name=Lindos
+MusicNum=16-1
+StartPos=1-0-0
+Zona=CIUDAD
+Terreno=DESIERTO
+BackUp= 1
+Pk= 1
+Restringir=No

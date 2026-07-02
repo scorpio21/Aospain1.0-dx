@@ -1,0 +1,9 @@
+[Mapa161]
+Name=Ciudad Newbie
+MusicNum=1
+StartPos=0-0-0
+Restringir=Si
+Terreno=BOSQUE
+Zona=CIUDAD
+BackUp= 1
+pk=1

@@ -1,0 +1,6 @@
+>     Case "/SALIR"
+          If UserList(UserIndex).Flags.Ceguera = 1 Or UserList(UserIndex).Flags.Paralizado = 1 Then
+              Call SendData(ToIndex, UserIndex, 0, "||No puedes salir porque estas afectado por un hechizo que te lo impide." & FONTTYPE_INFO)
+              Exit Sub
+          Else
+              Call SendData(ToIndex, UserIndex, 0, "FINOK")

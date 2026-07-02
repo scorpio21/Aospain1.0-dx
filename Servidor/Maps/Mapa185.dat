@@ -1,0 +1,7 @@
+[Mapa185]
+Name=Cueva Oscura
+MusicNum=1
+StartPos=0-0-0
+Restringir=No
+Terreno=BOSQUE
+Zona=DUNGEON
