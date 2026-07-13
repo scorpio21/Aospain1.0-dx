@@ -182,8 +182,7 @@ On Error GoTo ErrHandler
     SndVolume = 0
    
     Set DS_Enum = dX.GetDSEnum
-    ' Usar indice 0 = dispositivo por defecto del sistema
-    Set DS = dX.DirectSoundCreate(DS_Enum.GetGuid(0))
+    Set DS = dX.DirectSoundCreate(DS_Enum.GetGuid(1))
  
     DS.SetCooperativeLevel hWnd, DSSCL_PRIORITY
    

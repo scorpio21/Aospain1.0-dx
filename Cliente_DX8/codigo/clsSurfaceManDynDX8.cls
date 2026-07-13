@@ -110,7 +110,15 @@ On Error GoTo ErrHandler
             'Ultimo acceso
             .UltimoAcceso = GetTickCount
     
-            Set .texture = mD3D.CreateTextureFromFileEx(device, DirGraficos & LTrim(str(Archivo)) & ".bmp", _
+            ' Intentar BMP primero, luego PNG
+            Dim sPath As String
+            sPath = DirGraficos & LTrim(Str(Archivo)) & ".bmp"
+            If Len(Dir(sPath)) = 0 Then sPath = DirGraficos & LTrim(Str(Archivo)) & ".png"
+            If Len(Dir(sPath)) = 0 Then
+                Debug.Print "GRAFICO NO ENCONTRADO: " & DirGraficos & LTrim(Str(Archivo))
+                Exit Function
+            End If
+            Set .texture = mD3D.CreateTextureFromFileEx(device, sPath, _
                 D3DX_DEFAULT, D3DX_DEFAULT, 3, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, D3DX_FILTER_NONE, _
                 D3DX_FILTER_NONE, &HFF000000, texture_info, ByVal 0)
                 

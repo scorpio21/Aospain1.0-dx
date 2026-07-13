@@ -71,7 +71,7 @@ Genero=Hombre
 Raza=Humano
 Hogar=ULLATHORPE
 Clase=Hombre
-Password=1234567
+Password=1
 Desc=
 Heading= 3
 Head= 1
@@ -80,7 +80,7 @@ Arma= 2
 Escudo= 2
 Casco= 2
 LastIP=127.0.0.1
-Position=1-61-46
+Position=1-52-37
 [STATS]
 GLD= 0
 BANCO= 0
@@ -150,7 +150,7 @@ Obj39=0-0
 Obj40=0-0
 [Inventory]
 CantidadItems=6
-Obj1=467-100-0
+Obj1=467-99-0
 Obj2=468-100-0
 Obj3=460-1-1
 Obj4=463-1-1

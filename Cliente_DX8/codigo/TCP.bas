@@ -281,8 +281,8 @@ Sub HandleData(ByVal Rdata As String)
             Rdata = Right$(Rdata, Len(Rdata) - 2)
             UserMap = ReadField(1, Rdata, 44)
             'Obtiene la version del mapa
-            If FileExist(DirMapas & "Mapa" & UserMap & ".csm", vbNormal) Then
-                Open DirMapas & "Mapa" & UserMap & ".csm" For Binary As #1
+            If FileExist(DirMapas & "Mapa" & UserMap & ".map", vbNormal) Then
+                Open DirMapas & "Mapa" & UserMap & ".map" For Binary As #1
                 Seek #1, 1
                 Get #1, , tempint
                 Close #1

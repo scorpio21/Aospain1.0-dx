@@ -91,6 +91,18 @@ Begin VB.Form frmMain
       Left            =   6285
       Top             =   2040
    End
+   Begin VB.PictureBox renderer 
+      BackColor       =   &H00000000&
+      BorderStyle     =   0  'None
+      Height          =   6165
+      Left            =   75
+      ScaleHeight     =   411
+      ScaleMode       =   3  'Pixel
+      ScaleWidth      =   547
+      TabIndex        =   99
+      Top             =   1995
+      Width           =   8205
+   End
    Begin VB.PictureBox PanelDer 
       AutoSize        =   -1  'True
       BackColor       =   &H00000000&

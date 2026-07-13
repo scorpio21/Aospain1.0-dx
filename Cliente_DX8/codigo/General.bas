@@ -58,15 +58,15 @@ Public sHKeys() As String
 Public Declare Function sndPlaySound Lib "winmm.dll" Alias "sndPlaySoundA" (ByVal lpszSoundName As String, ByVal uFlags As Long) As Long
 
 Public Function DirGraficos() As String
-DirGraficos = RutaGraficos()
+DirGraficos = App.Path & "\" & Config_Inicio.DirGraficos & "\"
 End Function
 
 Public Function DirSound() As String
-DirSound = RutaSonidos()
+DirSound = App.Path & "\" & Config_Inicio.DirSonidos & "\"
 End Function
 
 Public Function DirMidi() As String
-DirMidi = RutaMusica()
+DirMidi = App.Path & "\" & Config_Inicio.DirMusica & "\"
 End Function
 Public Function SD(ByVal n As Integer) As Integer
 'Suma digitos
@@ -655,7 +655,7 @@ NextOpenChar = loopc
 End Function
 
 Public Function DirMapas() As String
-DirMapas = RutaMapas()
+DirMapas = App.Path & "\" & Config_Inicio.DirMapas & "\"
 End Function
 
 Sub SwitchMap(Map As Integer, X_Pos As Integer, Y_Pos As Integer)
@@ -698,7 +698,7 @@ NumChars = 0
 Dim Buffer(1 To ((YMaxMapSize - YMinMapSize + 1) * (XMaxMapSize - XMinMapSize + 1))) As TileMap
 Dim idx As Integer
 
-Open DirMapas & "Mapa" & Map & ".csm" For Binary Access Read As #1
+Open DirMapas & "Mapa" & Map & ".map" For Binary Access Read As #1
 Seek #1, 1
         
 Get #1, , MapInfo.MapVersion
@@ -923,7 +923,6 @@ ChDir App.Path
 'Cargamos el archivo de configuracion inicial
 If FileExist(App.Path & "\init\Inicio.con", vbNormal) Then
     Config_Inicio = LeerGameIni()
-    CargarRutas  ' Leer rutas desde rutas.ini (si existe) o usar defaults de Config_Inicio
 End If
 
 
@@ -1081,12 +1080,12 @@ LastTime = GetTickCount
 ENDL = Chr(13) & Chr(10)
 ENDC = Chr(1)
 
-'Call InitTileEngine(frmMain.hwnd, 152, 7, 32, 32, 13, 17, 9)
+'Call InitTileEngine(frmMain.renderer.hwnd, 0, 0, 32, 32, 13, 17, 9)
                                   
  If bNoResChange = False Then 'GS
-        Call InitTileEngine(frmMain.hwnd, frmMain.MainViewShp.Top + 23, frmMain.MainViewShp.Left + 3, 32, 32, Round(frmMain.MainViewShp.Height / 32), Round(frmMain.MainViewShp.Width / 32), 9) 'GS
+        Call InitTileEngine(frmMain.renderer.hwnd, 0, 0, 32, 32, Round(frmMain.renderer.ScaleHeight / 32), Round(frmMain.renderer.ScaleWidth / 32), 9) 'GS
     Else
-        Call InitTileEngine(frmMain.hwnd, frmMain.MainViewShp.Top + 1, frmMain.MainViewShp.Left + 1, 32, 32, 13, 17, 9)
+        Call InitTileEngine(frmMain.renderer.hwnd, 0, 0, 32, 32, 13, 17, 9)
 
     End If
 'Call AddtoRichTextBox(frmCargando.Status, "Creando animaciones extras.", 2, 51, 223, 1, 1)
@@ -1108,10 +1107,10 @@ Unload frmCargando
 
 LoopMidi = True
 
-If Musica = 0 Then
-    CurMidi = DirMidi & MIdi_Inicio & ".mid"
-    Call CargarMIDI(CurMidi)
-End If
+'If Musica = 0 Then
+'    Call CargarMIDI(DirMidi & MIdi_Inicio & ".mid")
+'    Play_Midi
+'End If
 
 'frmPres.Top = 0
 'frmPres.Left = 0
@@ -1201,7 +1200,7 @@ Do While prgRun
     
             '****** Update screen ******
             Call engine.Engine_BeginFrame  ' [DX8] BeginScene + Clear antes de dibujar
-            Call RenderScreen(UserPos.X - AddtoUserPos.X, UserPos.Y - AddtoUserPos.Y, OffsetCounterX, OffsetCounterY)
+            Call RenderScreen(UserPos.X - AddtoUserPos.X, UserPos.Y - AddtoUserPos.Y, TileBufferPixelOffsetX + OffsetCounterX, TileBufferPixelOffsetY + OffsetCounterY)
             'Call DoNightFX
             'Call DoLightFogata(UserPos.x - AddtoUserPos.x, UserPos.y - AddtoUserPos.y, OffsetCounterX, OffsetCounterY)
             '[CODE 000]:MatuX
@@ -1237,8 +1236,7 @@ Do While prgRun
     End If
     
     If Musica = 0 Then
-        ' [DX8] Comprobacion de MIDI via clsAudio
-        If Not Audio.MusicActivated Then Play_Midi
+        If Not Sonando() Then Play_Midi
     End If
          'Musica = 0
     'End If

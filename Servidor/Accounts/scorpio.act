@@ -1,13 +1,13 @@
 [scorpio]
-password=1234567
+password=1
 mail=sonscorpio@gmail.com
 Pregunta=lola
 Respuesta=lalo
 ban=0
 [PJS]
-NumPjs=2
+NumPjs=1
 PJ1=PERERU
-PJ2=DERED
+PJ2=
 PJ3=
 PJ4=
 PJ5=
